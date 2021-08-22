@@ -16,8 +16,6 @@ def addDigits(n):
             return
     return sums
 
-addDigits(15)
-
 def checkCreditCard(n):
     myList = Check(n)
     result = []
