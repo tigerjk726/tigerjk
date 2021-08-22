@@ -1,0 +1,39 @@
+def Check(card_numbers):
+    card_list = []
+    for i in card_numbers:
+        i = i.replace('-', '')
+        i = list(map(int, i))
+        card_list.append(i)
+    return card_list
+
+def addDigits(n):
+    sums = 0
+    while n:
+        if n > 0:        
+            sums += n % 10
+            n //= 10
+        else:
+            return
+    return sums
+
+addDigits(15)
+
+def checkCreditCard(n):
+    myList = Check(n)
+    result = []
+    for i in myList:
+        for ele in i:
+            if ele % 2 == 1:
+                ele *= 2
+            if ele >= 10:
+                single = addDigits(ele)
+        if sum(i) % 10 == 0:
+            result.append('1')
+            result.append(sum(i))
+        else:
+            result.append('0')
+            result.append(sum(i))
+            
+    return result
+
+print(checkCreditCard(['1234-5688-4111-1513', '1234-5688-4351-1513']))
