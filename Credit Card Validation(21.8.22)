@@ -36,4 +36,4 @@ def checkCreditCard(n):
             
     return result
 
-print(checkCreditCard(['1234-5688-4111-1513', '1234-5688-4351-1513']))
+checkCreditCard(['1234-5688-4111-1513', '1234-5688-4351-1513'])
